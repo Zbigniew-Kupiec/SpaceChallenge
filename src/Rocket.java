@@ -1,13 +1,19 @@
 public class Rocket implements SpaceShip {
+    int cost;
+    int weight;
+    int maxWeight;
+    int curWeight;
+    double launchExp;
+    double landCrash;
 
     @Override
     public boolean launch() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean land() {
-        return false;
+        return true;
     }
 
     @Override
