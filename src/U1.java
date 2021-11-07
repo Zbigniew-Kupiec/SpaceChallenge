@@ -29,7 +29,6 @@ public class U1 extends Rocket {
     public boolean launch() {
         System.out.println("\n " + " ^^^ LAUNCH ^^^");
         double randomNr = new Random().nextDouble();
-        // double random = randomNr.nextDouble();
         double launchExp = 0.05 * (getTotalWgt() / getMaxWeight());
         System.out.println("CARGO : " + getCurWeight());
         if (launchExp >= randomNr) {
@@ -44,7 +43,6 @@ public class U1 extends Rocket {
     public boolean land() {
         System.out.println("\n" + "___ LANDING ___");
         double randomNr = new Random().nextDouble();
-        // double random = randomNr.nextDouble();
         double landCrash = 0.01 * (getTotalWgt() / getMaxWeight());
         if (landCrash >= randomNr) {
             System.out.println("CRASHED U1 !!! " + "\n" +  "... SEND NEW ROCKET, BECAUSE U1 EXPLODED ... ");
