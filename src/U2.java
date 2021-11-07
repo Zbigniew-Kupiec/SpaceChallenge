@@ -7,6 +7,7 @@ public class U2 extends Rocket {
     public U2() {
         this(0);
     }
+    @SuppressWarnings("SpellCheckingInspection")
     public U2(int lastWght) {
         int maxWeight = 11000;
         setMaxWeight(maxWeight);
