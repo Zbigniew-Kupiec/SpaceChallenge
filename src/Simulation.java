@@ -12,8 +12,8 @@ public class Simulation {
     public ArrayList<Rocket> rocketsU1;
     public ArrayList<Rocket> rocketsU2;
     public boolean hasLand = true;
-    public File phaseOneFile = new File("src\\phase-1.txt");
-    public File phaseTwoFile = new File("src\\phase-2.txt");
+    public File phaseOneFile = new File("phase-1.txt");
+    public File phaseTwoFile = new File("phase-2.txt");
 
     public ArrayList<Item> loadItems(int start) throws FileNotFoundException {
         switch (start) {
