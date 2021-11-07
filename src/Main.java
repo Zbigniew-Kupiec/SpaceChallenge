@@ -22,12 +22,12 @@ public class Main {
         simulate.runSimulation(simulate.loadU1(itemPhaseOne),1);
         System.out.println("--- SIMULATE COMPLETE ---" + "\n");
         rocketPhaseOne = U1.getRocketCountU1();
-        System.out.println("ROCKET USED - PHASE 1 " + rocketPhaseOne);
+        System.out.println("ROCKET USED - PHASE 1 : " + rocketPhaseOne);
         System.out.println("--- SIMULATE PHASE 2 ---");
         simulate.runSimulation(simulate.loadU1(itemPhaseTwo),1);
         System.out.println("--- SIMULATE COMPLETE ---" + "\n");
         rocketPhaseTwo = U1.getRocketCountU1() - rocketPhaseOne;
-        System.out.println("ROCKET USED - PHASE 2 " + rocketPhaseTwo + "\n");
+        System.out.println("ROCKET USED - PHASE 2 : " + rocketPhaseTwo + "\n");
         System.out.println("TOTAL OF ROCKED USED : " + U1.getRocketCountU1());
         costU1 = totalCost(1);
 
@@ -36,12 +36,12 @@ public class Main {
         simulate.runSimulation(simulate.loadU2(itemPhaseOne),2);
         System.out.println("--- SIMULATE COMPLETE ---" + "\n");
         rocketPhaseOne = U2.getRocketCountU2();
-        System.out.println("ROCKET USED - PHASE 1 " + rocketPhaseOne);
+        System.out.println("ROCKET USED - PHASE 1 : " + rocketPhaseOne);
         System.out.println("--- SIMULATE PHASE 2 ---");
         simulate.runSimulation(simulate.loadU1(itemPhaseTwo),2);
         System.out.println("--- SIMULATE COMPLETE ---" + "\n");
         rocketPhaseTwo = U2.getRocketCountU2() - rocketPhaseOne;
-        System.out.println("ROCKET USED - PHASE 2 " + rocketPhaseTwo + "\n");
+        System.out.println("ROCKET USED - PHASE 2 : " + rocketPhaseTwo + "\n");
         System.out.println("TOTAL OF ROCKED USED : " + U2.getRocketCountU2());
         costU2 = totalCost(2);
 
