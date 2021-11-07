@@ -111,14 +111,19 @@ public class Simulation {
     }
 
     private void launchSimulate(int i) {
-        if(i == 1) {
-            int countOne = U1.getRocketCountU1();
-            countOne++;
-            U1.setRocketCountU1(countOne);
-        } else {
-            int countOne = U2.getRocketCountU2();
-            countOne++;
-            U2.setRocketCountU2(countOne);
+        switch (i) {
+            case 1 -> {
+                int countOne = U1.getRocketCountU1();
+                countOne++;
+                U1.setRocketCountU1(countOne);
+                break;
+            }
+            default -> {
+                int countOne = U2.getRocketCountU2();
+                countOne++;
+                U2.setRocketCountU2(countOne);
+                break;
+            }
         }
     }
 
