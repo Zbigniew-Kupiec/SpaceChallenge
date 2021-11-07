@@ -21,11 +21,13 @@ public class Simulation {
                 System.out.println("PHASE 1 LOAD...");
                 loadItemsPhases(phaseOneFile);
                 System.out.println("PHASE 1 COMPLETED");
+                System.out.println(phaseOneFile + " contains " + item.size() + " items\n" );
             }
             case 2 -> {
                 System.out.println("PHASE 2 LOAD...");
                 loadItemsPhases(phaseTwoFile);
-                System.out.println("PHASE 2 COMPLETED" + "\n");
+                System.out.println("PHASE 2 COMPLETED");
+                System.out.println(phaseTwoFile + " contains " + item.size() + " items\n");
             }
         }
         return item;
