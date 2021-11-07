@@ -16,7 +16,7 @@ public class U2 extends Rocket {
         setWeight(weight);
         setCurWeight(lastWght);
         rocketCountU2++;
-        System.out.println("_____________________________");
+        System.out.println("_____________________________________________");
     }
     public static int getRocketCountU2() {
         return rocketCountU2;
