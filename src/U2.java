@@ -27,22 +27,20 @@ public class U2 extends Rocket {
     public boolean launch() {
         System.out.println("\n " + " ^^^ LAUNCH ^^^");
         double randomNr = new Random().nextDouble();
-        // double random = randomNr.nextDouble();
         double launchExp = 0.04 * (getTotalWgt() / getMaxWeight());
         System.out.println("CARGO : " + getCurWeight());
         if (launchExp >= randomNr) {
             System.out.println("EXPLODE U2 !!! " + "\n" + "... SEND NEW ROCKET, BECAUSE U2 EXPLODED ... ");
-            return false;
+            return true;
         } else {
             System.out.println("SUCCESSFUL START U2");
-            return true;
+            return false;
         }
     }
     @Override
     public boolean land() {
         System.out.println("\n" + "___ LANDING ___");
         double randomNr = new Random().nextDouble();
-        // double random = randomNr.nextDouble();
         double landCrash = 0.02 * (getTotalWgt() / getMaxWeight());
         if (landCrash >= randomNr) {
             System.out.println("CRASHED U2 !!! " + "\n" +  "... SEND NEW ROCKET, BECAUSE U2 EXPLODED ... ");

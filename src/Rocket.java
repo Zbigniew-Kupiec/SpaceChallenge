@@ -3,10 +3,10 @@ public class Rocket implements SpaceShip {
     public int weight;
     public int maxWeight;
     public int curWeight;
-    public double totalWgt = curWeight + weight;
+    public double totalWgt = 0;
 
     @Override
-    public boolean launch() { return true; }
+    public boolean launch() { return false; }
     @Override
     public boolean land() {
         return true;
@@ -14,10 +14,10 @@ public class Rocket implements SpaceShip {
     @Override
     public boolean canCarry(Item item) {
         if(maxWeight >= (curWeight + item.getWeight()))
-            return true;
+            return false;
         else
             System.out.println("You cannot wear an item : " + item.getName() + "\tWeight : " + item.getWeight());
-        return false;
+        return true;
     }
 
     @Override

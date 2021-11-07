@@ -34,10 +34,10 @@ public class U1 extends Rocket {
         System.out.println("CARGO : " + getCurWeight());
         if (launchExp >= randomNr) {
             System.out.println("EXPLODE U1 !!! " + "\n" + "... SEND NEW ROCKET, BECAUSE U1 EXPLODED ... ");
-            return false;
+            return true;
         } else {
             System.out.println("SUCCESSFUL START U1");
-            return true;
+            return false;
         }
     }
     @Override

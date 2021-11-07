@@ -51,7 +51,7 @@ public class Simulation {
         Iterator<Item> iterator = itemU1.iterator();
         while (iterator.hasNext()) {
             Item item = iterator.next();
-            if (!rocket.canCarry(item)) {
+            if (rocket.canCarry(item)) {
                 rocketsU1.add(rocket);
                 rocket = new U1();
                 System.out.println("ROCKET U1 CREATED");
@@ -69,7 +69,7 @@ public class Simulation {
         Iterator<Item> iterator = itemU2.iterator();
         while (iterator.hasNext()) {
             Item item = iterator.next();
-            if (!rocket.canCarry(item)) {
+            if (rocket.canCarry(item)) {
                 rocketsU2.add(rocket);
                 rocket = new U2();
                 System.out.println("ROCKET U2 CREATED");
@@ -82,9 +82,9 @@ public class Simulation {
     }
     public void runSimulation(@NotNull ArrayList<Rocket> rocketTo, int i) {
         rocketTo.forEach(rocket -> {
-            while (!rocket.launch()) launchSimulate(i);
+            while (rocket.launch()) launchSimulate(i);
             while (!rocket.land()) {
-                while (!rocket.launch()) {
+                while (rocket.launch()) {
                     launchSimulate(i);
                 }
                 landSimulate(i);
