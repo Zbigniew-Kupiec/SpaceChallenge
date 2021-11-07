@@ -31,13 +31,14 @@ public class Simulation {
         return item;
     }
 
+    @SuppressWarnings("ConditionalBreakInInfiniteLoop")
     private void loadItemsPhases(File file) throws FileNotFoundException {
         item = new ArrayList<>();
         Scanner scanFile = new Scanner(file);
         while (true) {
             if (!scanFile.hasNextLine()) break;
             String s = scanFile.nextLine();
-            String[] separateStrings = s.split("-");
+            String[] separateStrings = s.split("=");
             Item itemOne = new Item(separateStrings[0], Integer.parseInt(separateStrings[1]));
             item.add(itemOne);
         }
@@ -47,9 +48,9 @@ public class Simulation {
         System.out.println("U1 LOAD...");
         rocketsU1 = new ArrayList<>();
         Rocket rocket = new U1();
-        Iterator iterator = itemU1.iterator();
+        Iterator<Item> iterator = itemU1.iterator();
         while (iterator.hasNext()) {
-            Item item = (Item) iterator.next();
+            Item item = iterator.next();
             if (!rocket.canCarry(item)) {
                 rocketsU1.add(rocket);
                 rocket = new U1();
@@ -65,9 +66,9 @@ public class Simulation {
         System.out.println("U2 LOAD...");
         rocketsU2 = new ArrayList<>();
         Rocket rocket = new U2();
-        Iterator iterator = itemU2.iterator();
+        Iterator<Item> iterator = itemU2.iterator();
         while (iterator.hasNext()) {
-            Item item = (Item) iterator.next();
+            Item item = iterator.next();
             if (!rocket.canCarry(item)) {
                 rocketsU2.add(rocket);
                 rocket = new U2();
@@ -97,13 +98,11 @@ public class Simulation {
                 int count = U1.getRocketCountU1();
                 count++;
                 U1.setRocketCountU1(count);
-                break;
             }
             case 2 -> {
                 int count = U2.getRocketCountU2();
                 count++;
                 U2.setRocketCountU2(count);
-                break;
             }
         }
         hasLand = false;
